@@ -15,4 +15,4 @@ fi
 
 sysctl -w net.ipv4.ip_forward=1
 
-docker run --name privoxy -itd -p 8119:8119  -e "ADDRESS=${ADDRESS}" privoxy:latest
+docker run --name privoxy -itd --net=host  -e "ADDRESS=${ADDRESS}" privoxy:latest
