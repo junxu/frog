@@ -2,12 +2,9 @@ From alpine
 
 RUN set -ex \
         \
-        && apk add --no-cache --virtual .fetch-deps \
+        && apk add --update --no-cache --virtual .fetch-deps \
            python \
-           #           python-dev \
            py-pip \
-           #    build-base \
-           #           libsodium-dev \
         && rm -fr .fetch-deps
 
 RUN pip install shadowsocks-py \
