@@ -17,4 +17,4 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["-c", "/etc/shadowsocks/config"]
 
-EXPOSE 1080
+EXPOSE 1080 1081

@@ -9,4 +9,4 @@ COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["privoxy", "--no-daemon", "/etc/privoxy/config"]
 
-EXPOSE 8119
+EXPOSE 8119 8129

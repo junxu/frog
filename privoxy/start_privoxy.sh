@@ -15,4 +15,6 @@ fi
 
 sysctl -w net.ipv4.ip_forward=1
 
-docker run --name privoxy -itd --net=host  -e "ADDRESS=${ADDRESS}" privoxy:latest
+export ADDRESS=<address>
+
+docker run --name privoxy  --restart=always -itd --net=host -e "ADDRESS=${ADDRESS}" privoxy:latest
